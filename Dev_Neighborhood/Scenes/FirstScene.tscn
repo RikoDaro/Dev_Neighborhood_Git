@@ -6,20 +6,20 @@
 [ext_resource path="res://buildings/ufficiCrisci (1).png" type="Texture" id=4]
 [ext_resource path="res://buildings/uffici (1).png" type="Texture" id=5]
 [ext_resource path="res://Player/Layer 1_sprite_01.png" type="Texture" id=6]
-[ext_resource path="res://Player/Layer 1_sprite_06.png" type="Texture" id=7]
-[ext_resource path="res://Player/Layer 1_sprite_07.png" type="Texture" id=8]
-[ext_resource path="res://Player/Layer 1_sprite_08.png" type="Texture" id=9]
-[ext_resource path="res://Player/Layer 1_sprite_10.png" type="Texture" id=10]
-[ext_resource path="res://Player/Layer 1_sprite_11.png" type="Texture" id=11]
-[ext_resource path="res://Player/Layer 1_sprite_12.png" type="Texture" id=12]
-[ext_resource path="res://Player/Layer 1_sprite_14.png" type="Texture" id=13]
-[ext_resource path="res://Player/Layer 1_sprite_15.png" type="Texture" id=14]
-[ext_resource path="res://Player/Layer 1_sprite_16.png" type="Texture" id=15]
-[ext_resource path="res://Player/Layer 1_sprite_04.png" type="Texture" id=16]
-[ext_resource path="res://Player/Layer 1_sprite_02.png" type="Texture" id=17]
-[ext_resource path="res://Player/Layer 1_sprite_05.png" type="Texture" id=18]
-[ext_resource path="res://Player/Layer 1_sprite_13.png" type="Texture" id=19]
-[ext_resource path="res://Player/Layer 1_sprite_09.png" type="Texture" id=20]
+[ext_resource path="res://Player/Layer 1_sprite_10.png" type="Texture" id=7]
+[ext_resource path="res://Player/Layer 1_sprite_11.png" type="Texture" id=8]
+[ext_resource path="res://Player/Layer 1_sprite_12.png" type="Texture" id=9]
+[ext_resource path="res://Player/Layer 1_sprite_14.png" type="Texture" id=10]
+[ext_resource path="res://Player/Layer 1_sprite_15.png" type="Texture" id=11]
+[ext_resource path="res://Player/Layer 1_sprite_16.png" type="Texture" id=12]
+[ext_resource path="res://Player/Layer 1_sprite_09.png" type="Texture" id=13]
+[ext_resource path="res://Player/Layer 1_sprite_04.png" type="Texture" id=14]
+[ext_resource path="res://Player/Layer 1_sprite_02.png" type="Texture" id=15]
+[ext_resource path="res://Player/Layer 1_sprite_05.png" type="Texture" id=16]
+[ext_resource path="res://Player/Layer 1_sprite_06.png" type="Texture" id=17]
+[ext_resource path="res://Player/Layer 1_sprite_07.png" type="Texture" id=18]
+[ext_resource path="res://Player/Layer 1_sprite_08.png" type="Texture" id=19]
+[ext_resource path="res://Player/Layer 1_sprite_13.png" type="Texture" id=20]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -31,37 +31,37 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
-"name": "Walk_Up",
-"speed": 5.0
+"name": "Walk_Left",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "Walk_Left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ) ],
-"loop": true,
 "name": "Walk_Rigth",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "Stand_Left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 15 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Walk_Down",
-"speed": 5.0
+"speed": 7.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "Stand_Up",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "Stand_Rigth",
-"speed": 5.0
+"name": "Walk_Up",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "Stand_Left",
+"name": "Stand_Rigth",
 "speed": 5.0
 } ]
 
@@ -229,11 +229,15 @@ position = Vector2( 3376, 0 )
 texture = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-editor/display_folded = true
-position = Vector2( 100, 100 )
+position = Vector2( 926, 220 )
 frames = SubResource( 1 )
 animation = "Stand_Down"
 script = ExtResource( 21 )
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite"]
 current = true
+zoom = Vector2( 0.5, 0.5 )
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
