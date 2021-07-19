@@ -5,6 +5,7 @@
 [ext_resource path="res://buildings/UVbuilding (1).png" type="Texture" id=3]
 [ext_resource path="res://buildings/ufficiCrisci (1).png" type="Texture" id=4]
 [ext_resource path="res://buildings/uffici (1).png" type="Texture" id=5]
+<<<<<<< Updated upstream
 [ext_resource path="res://Scripts/Collision.gd" type="Script" id=6]
 [ext_resource path="res://Player/Layer 1_sprite_01.png" type="Texture" id=7]
 [ext_resource path="res://Player/Layer 1_sprite_06.png" type="Texture" id=8]
@@ -21,6 +22,24 @@
 [ext_resource path="res://Player/Layer 1_sprite_14.png" type="Texture" id=19]
 [ext_resource path="res://Player/Layer 1_sprite_15.png" type="Texture" id=20]
 [ext_resource path="res://Player/Layer 1_sprite_16.png" type="Texture" id=21]
+=======
+[ext_resource path="res://Player/Layer 1_sprite_01.png" type="Texture" id=6]
+[ext_resource path="res://Player/Layer 1_sprite_10.png" type="Texture" id=7]
+[ext_resource path="res://Player/Layer 1_sprite_11.png" type="Texture" id=8]
+[ext_resource path="res://Player/Layer 1_sprite_12.png" type="Texture" id=9]
+[ext_resource path="res://Player/Layer 1_sprite_14.png" type="Texture" id=10]
+[ext_resource path="res://Player/Layer 1_sprite_15.png" type="Texture" id=11]
+[ext_resource path="res://Player/Layer 1_sprite_16.png" type="Texture" id=12]
+[ext_resource path="res://Player/Layer 1_sprite_13.png" type="Texture" id=13]
+[ext_resource path="res://Player/Layer 1_sprite_09.png" type="Texture" id=14]
+[ext_resource path="res://Player/Layer 1_sprite_05.png" type="Texture" id=15]
+[ext_resource path="res://Player/Layer 1_sprite_06.png" type="Texture" id=16]
+[ext_resource path="res://Player/Layer 1_sprite_07.png" type="Texture" id=17]
+[ext_resource path="res://Player/Layer 1_sprite_08.png" type="Texture" id=18]
+[ext_resource path="res://Player/Layer 1_sprite_04.png" type="Texture" id=19]
+[ext_resource path="res://Player/Layer 1_sprite_02.png" type="Texture" id=20]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=21]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 47.7974, 63.9247 )
@@ -37,16 +56,21 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
+<<<<<<< Updated upstream
 "name": "Walk_Up",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "Stand_Rigth",
+=======
+"name": "Walk_Left",
+>>>>>>> Stashed changes
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ) ],
 "loop": true,
+<<<<<<< Updated upstream
 "name": "Walk_Left",
 "speed": 7.0
 }, {
@@ -59,16 +83,42 @@ animations = [ {
 "loop": true,
 "name": "Walk_Down",
 "speed": 7.0
+=======
+"name": "Walk_Rigth",
+"speed": 5.0
 }, {
-"frames": [ ExtResource( 18 ) ],
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "Stand_Rigth",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Stand_Left",
+"speed": 5.0
+>>>>>>> Stashed changes
+}, {
+"frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "Stand_Up",
 "speed": 5.0
 }, {
+<<<<<<< Updated upstream
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "Walk_Rigth",
 "speed": 7.0
+=======
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Walk_Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Walk_Down",
+"speed": 5.0
+>>>>>>> Stashed changes
 } ]
 
 [node name="Node2D" type="Node2D"]
@@ -239,6 +289,7 @@ texture = ExtResource( 2 )
 position = Vector2( 3376, 0 )
 texture = ExtResource( 5 )
 
+<<<<<<< Updated upstream
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 926, 220 )
 script = ExtResource( 6 )
@@ -249,10 +300,16 @@ shape = SubResource( 2 )
 
 [node name="Player" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 3 )
+=======
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 100, 100 )
+frames = SubResource( 1 )
+>>>>>>> Stashed changes
 animation = "Stand_Down"
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 current = true
+<<<<<<< Updated upstream
 zoom = Vector2( 0.5, 0.5 )
 drag_margin_left = 0.1
 drag_margin_top = 0.1
@@ -261,3 +318,6 @@ drag_margin_bottom = 0.1
 
 [node name="RayCast2D" type="RayCast2D" parent="KinematicBody2D"]
 scale = Vector2( 1, 0.5 )
+=======
+zoom = Vector2( 0.3, 0.3 )
+>>>>>>> Stashed changes
